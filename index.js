@@ -16,7 +16,7 @@ const uploadMiddleware = multer({ dest: "uploads/" });
 const salt = bcrypt.genSaltSync(10);
 const secret = "asdtyhcnrodntoneltonetoehbrerefert";
 
-app.use(cors({ credentials: true, origin: "*" })); //We have to set this because if this is not there, credentials would not work(credentials to true and origin to the site where u want to access it from)
+app.use(cors({ credentials: true, origin: "http://localhost:5173"})); //We have to set this because if this is not there, credentials would not work(credentials to true and origin to the site where u want to access it from)
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
